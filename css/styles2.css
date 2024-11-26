@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('/img/Cielo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Contenedor para centrar las imágenes Leer y Escribir */
+.imagenes-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    /* Ajusta para que ocupe casi toda la pantalla */
+    gap: 20px;
+    /* Espacio entre imágenes */
+}
+
+/* Estilo común para las imágenes */
+.imagen {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Efecto zoom al pasar el cursor */
+.imagen:hover {
+    transform: scale(1.5);
+}
+
+
+
+.imagen.tamañoAprender {
+    width: 350px;
+    height: auto;
+}
+
+/* Imagen "Salir" en posición inicial */
+.imagen.salir {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    scale: 150%;
+}

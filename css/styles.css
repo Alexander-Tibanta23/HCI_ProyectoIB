@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('/img/Cielo.jpg');
+    /* Ruta de la imagen */
+    background-size: cover;
+    /* Escala la imagen para cubrir toda la pantalla */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    /* Fija la imagen para mantener el fondo constante al desplazarse */
+}
+
+/* Contenedor para las imágenes */
+.imagenes-contenedor {
+    position: absolute;
+    /* Permite colocar las imágenes con posiciones específicas */
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo común para las imágenes */
+.imagen {
+    position: absolute;
+    /* Permite posicionar las imágenes de manera específica */
+    width: 100px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 100px;
+    transition: transform 0.3s ease;
+    /* Animación suave */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    cursor: pointer;
+}
+
+/* Efecto zoom al pasar el cursor */
+.imagen:hover {
+    transform: scale(1.5);
+    /* Aumenta el tamaño al 150% */
+}
+
+/* Imagen : siempre centrada */
+.imagen.jugar {
+    top: 40%;
+    left: 50%;
+    scale: 300%;
+    /* Centra la imagen en el contenedor */
+}
+
+/* Imagen : esquina inferior derecha (SALIR) */
+.imagen.salir {
+    top: 10%;
+    right: 15%;
+    scale: 200%;
+    /* Coloca la imagen en la esquina inferior derecha */
+}
+
+/* Imagen : esquina inferior izquierda (Recursos Adicionales) */
+.imagen.recursosAdicionales {
+    top: 10%;
+    left: 10%;
+    scale: 200%;
+    /* Coloca la imagen en la esquina inferior izquierda */
+}
+
+.imagen.imagenAprendamosALeer {
+    top: 40%;
+    left: 50%;
+    scale: 300%;
+}

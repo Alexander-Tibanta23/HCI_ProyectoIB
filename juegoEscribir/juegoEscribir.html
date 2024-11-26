@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Armar Palabras</title>
+    <link rel="stylesheet" href="stylesEscribir.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- Imagen de la pregunta -->
+        <div>
+            <img id="questionImage" src="/img/gatocomuneuropeo-97.jpeg" alt="Imagen de Gato"
+                class="imagen recuadroPregunta">
+        </div>
+
+        <!-- Espacios para armar la palabra -->
+        <div class="word-box" id="word-box"></div>
+
+        <!-- Sílabas disponibles -->
+        <div id="syllables-container"></div>
+    </div>
+
+    <!-- Mensaje de palabra incorrecta -->
+    <div id="incorrectMessage" class="message" style="display:none;">Palabra Incorrecta</div>
+
+    <!-- Botones de navegación -->
+    <div class="navigation">
+        <button id="retryButton" style="display:none;">⟲ Reintentar</button>
+        <button id="nextButton" disabled>➡️ Siguiente</button>
+    </div>
+
+    <a href="/index.html">
+        <img src="/img/img-NUBES/salir.png" alt="Salir" class="imagen salir">
+    </a>
+
+    <script src="scriptEscribir.js"></script>
+</body>
+
+</html>

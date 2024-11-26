@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background-image: url('/img/Cielo.jpg');
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+#container {
+    text-align: center;
+}
+
+.word-box {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.syllable-box {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#syllables-container {
+    display: flex;
+    justify-content: center;
+}
+
+.syllable {
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.moving {
+    position: absolute;
+    transition: transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease;
+    z-index: 10;
+}
+
+.moving-bounce {
+    animation: bounce 1s ease-in-out;
+}
+
+/* Efecto de rebote */
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Efecto zoom al pasar el cursor */
+.imagen.salir:hover {
+    transform: scale(1.5);
+}
+
+.imagen.salir {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    scale: 150%;
+}
+
+.imagen.recuadroPregunta {
+    width: 300px;
+    height: auto;
+}
+
+button#nextButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
